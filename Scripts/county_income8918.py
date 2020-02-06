@@ -1,8 +1,7 @@
+# County median income (Census SAIPE- source: https://www.census.gov/programs-surveys/saipe/data/datasets.All.html)
 import pandas as pd
 import numpy as np
 import os
-
-# Income data source: Census SAIPE data (https://www.census.gov/programs-surveys/saipe/data/datasets.All.html)
 
 # 1989-2002
 dats = os.listdir('Med_Inc_SAIPE/')[-6:] + os.listdir('Med_Inc_SAIPE/')[:3]
@@ -71,7 +70,7 @@ dats_df = pd.concat([dats_df, dats96]).sort_values(['FIPS', 'Year'])
 # These counties contain too many incomplete years (easier to remove altogether)
 dats_df = dats_df[~dats_df.FIPS.isin(['15005', '51780'])]
 
-# Assigning avg. of prev and following incomes
+# Assigning avg. of prev and following incomes to years missing data
 dats_df['Median HH Income'] = round(dats_df['Median HH Income'].fillna((dats_df['Median HH Income'].shift() + dats_df['Median HH Income'].shift(-1))/2), 0)
 
 dats_df = dats_df[dats_df['County FIPS'].astype(int) > 0]

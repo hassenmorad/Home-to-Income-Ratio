@@ -14,18 +14,18 @@ for year in range(1989, 2019):
     else:
         yr = year
         
-    yr_df = file[file.Year == year]
+    yr_df = file[file.Year == year].dropna(subset=['HIR'])
     yr_fips = yr_df.FIPS.unique()
     mig_yr = mig[(mig.Year == yr) & (mig.FIPS.isin(yr_fips))]
     
     # FIPS grouped by county size
-    county500k = mig_yr.FIPS[mig_yr.Households > 500000].values
-    county200k = mig_yr.FIPS[mig_yr.Households > 200000].values
-    county100k = mig_yr.FIPS[mig_yr.Households > 100000].values
-    county50k = mig_yr.FIPS[mig_yr.Households > 50000].values
-    county20k = mig_yr.FIPS[mig_yr.Households > 20000].values
-    county10k = mig_yr.FIPS[mig_yr.Households > 10000].values
-    countyless10k = mig_yr.FIPS[mig_yr.Households <= 10000].values
+    county500k = mig_yr.FIPS[mig_yr.Households >= 500000].values
+    county200k = mig_yr.FIPS[(mig_yr.Households >= 200000) & (mig_yr.Households < 500000)].values
+    county100k = mig_yr.FIPS[(mig_yr.Households >=100000) & (mig_yr.Households < 200000)].values
+    county50k = mig_yr.FIPS[(mig_yr.Households >= 50000) & (mig_yr.Households < 100000)].values
+    county20k = mig_yr.FIPS[(mig_yr.Households >= 20000) & (mig_yr.Households < 50000)].values
+    county10k = mig_yr.FIPS[(mig_yr.Households >= 10000) & (mig_yr.Households < 20000)].values
+    countyless10k = mig_yr.FIPS[mig_yr.Households < 10000].values
     
     groups_dict = {}
     fips_groups = [county500k, county200k, county100k, county50k, county20k, county10k, countyless10k]
@@ -37,7 +37,7 @@ for year in range(1989, 2019):
             hir = yr_df.HIR[yr_df.FIPS == fips].iloc[0]
             hh_size = mig.Households[(mig.Year == yr) & (mig.FIPS == fips)].iloc[0]
             fips_hirs.extend(np.full(hh_size, hir))
-        groups_dict[groups[counter]] = np.median(fips_hirs)
+        groups_dict[groups[counter]] = np.median(fips_hirs).round(3)
         counter += 1
     yrs_dict[year] = groups_dict
 

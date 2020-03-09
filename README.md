@@ -15,6 +15,6 @@ This repository contains all files used to analyze issues related to housing aff
 2. Income
     - [**Census**](https://data.census.gov/cedsci/): 1-yr and 5-yr county-level estimates from the American Community Survey (ACS)
 
-## Misc:
+### Misc:
 - Scripts of data cleaning and analysis is stored in the "Scripts" folder
 - Altair chart code is stored in the "Notebooks" folder

@@ -2,7 +2,7 @@
 
 This repository contains all files used to analyze issues related to housing affordability. This analysis is the foundation of three articles:
 
-(1) [**Analyzing the 30% Housing Affordability Rule**](https://medium.com/@hassen.morad/analyzing-the-30-housing-affordability-rule-46fa6d06bc34)
+(1) [**Analyzing the 30% Housing Affordability Rule**](https://hassenmorad.github.io/housing_30.html)
 
 (2) **Analyzing the Home Price-to-Income Ratio** (forthcoming)
 

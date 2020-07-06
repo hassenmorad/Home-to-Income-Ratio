@@ -4,9 +4,9 @@ This repository contains all files used to analyze issues related to housing aff
 
 (1) [**Analyzing the 30% Housing Affordability Rule**](https://hassenmorad.github.io/housing_30.html)
 
-(2) **Analyzing the Home Price-to-Income Ratio** (forthcoming)
+(2) [**Is California Out Migration Fueled By Unaffordable Housing?**](https://hassenmorad.github.io/CA_migration.html)
 
-(3) [**Is California Out Migration Fueled By Unaffordable Housing?**](https://hassenmorad.github.io/CA_migration.html)
+(3) **Analyzing the Home Price-to-Income Ratio** (forthcoming)
 
 ## Data Sources:
 1. Housing

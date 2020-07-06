@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+			<title>Housing Affordability - 30% Rule</title>
+			<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Content -->
+							<span font-family: Lato, Calibri, Arial>
+								<section>
+									<br>
+                  <h1><span class="normal">Analyzing the 30% Housing Affordability Rule</span></h1>
+									<h2><span class="normal"><i>This is the first in a series of articles examining issues related to housing affordability.</i></span></h2>
+									<br>
+									<img src="images/house_money.jpg" class="image fit">
+
+									<h4><i>Feb 2020</i></h4>
+
+									<p><i>
+										In this first article I present a comparative analysis of how renters and homeowners fare with regard to the popular 
+										<a href="https://www.cnbc.com/2018/06/06/how-much-of-your-income-you-should-be-spending-on-housing.html" target="blank">30% housing affordability rule</a>.
+										The findings below were extracted from income and housing data retrieved primarily from the US Census Bureau and Zillow. More details can be found in this project’s 
+										<a href="https://github.com/hassenmorad/Housing-Affordability" target="blank">GitHub repository</a>.
+									</i></p>
+
+									<hr>
+
+									<p>The 30% rule is a housing affordability standard which states that housing expense should not exceed 30% of household income. 
+										This standard was originally outlined in the National Housing Act of 1937 to establish reasonable rent for low-income households (initially 20% of income) and has since become widely accepted as a reliable affordability standard for all housing. 
+										While it wasn’t created to serve as a universal measure of affordability, it does provide a useful general guideline for individuals and institutions to lean on.
+										In my analysis below, I dissect this rule and provide some insight into its impact on housing today, specifically highlighting the differences between renters and homeowners.</p>
+
+									<h2>Debt-to-Income Ratio</h2>
+
+									<p>One manifestation of the 30% rule is the debt-to-income ratio (DTI), which mortgage lenders use to approve loans. 
+										They typically require that gross household income not exceed 28% of total housing expense, including the loan principal, interest, taxes, and insurance (PITI). 
+										This upper limit on housing expense ensures responsible lending and is specifically referred to as the <i>front-end</i> DTI. 
+										Although lenders also factor in additional debts when approving loans (e.g. credit card bills, car payments, etc.) 
+										I will focus specifically on front-end DTI in my analysis since non-housing related debts vary widely across different household types.
+									</p>
+
+									<h2>Do Renters Differ From Homeowners?</h2>
+									<p>The common perception is that landlords still implement the 30% rule today. 
+										While this may be true, upon examining the data it’s apparent that renters as a group (comprising about 37% of US households) are much more burdened by housing expense than homeowners despite supposedly being subjected to a similar upper limit. 
+										The chart below presents the national median front-end DTI for renters and homeowners from 2008–2018.
+									</p>
+
+									<img src="images/nat_rent_mort_per_inc.svg" height="400">
+									<h4><span class="normal"><i>Source: American Community Survey (Census) 1-yr. housing and income estimates</i></span></h4>
+									<br>
+
+									<p>From 2008-2018, renters devoted a much larger percentage of their incomes to housing expenses than homeowners.
+										The following charts present a more zoomed-in view, plotting the distribution of renter and homeowner income devoted to housing for all US counties from 2014-2018.</p>
+									<br>
+									<img src="images/dist_comb.svg" width="620">
+									
+									<h4><span class="normal"><i>*In almost half of all counties (42%), the median share of income devoted to rent exceeded 30%.</i></span></h4>
+									<br>
+
+									<p>
+										Homeowners not only devoted less to housing than renters, but the distribution of county medians was also much tighter. 
+										Here are a few potential explanations for the disparity between them:
+									</p>
+									<ol>
+										<li>It's possible that landlords don’t enforce the 30% rule on renters as strictly as mortgage lenders do on homeowners. 
+											Unlike landlords, mortgage lenders are also incentivized to safeguard against credit risk by the threat of legal action by the federal government if they fail to responsibly approve loans.
+											Landlords have more freedom to enter into riskier rent arrangements.</li>
+										<li>Median homeowner household income ($6,500) was almost double that of renter households ($3,400) in 2018, which may indicate that renters are forced to devote a relatively larger share of their income to housing out of necessity.</li>
+										<li>Mortgage payments are generally set at a specific amount from the beginning of the loan period, whereas rent payments tend to increase over time. 
+											This fact along with the general upward trend of wages means that homeowners become relatively financially stronger over time compared to renters, 
+											whose wages are unlikely to rise at a much faster rate than housing expense.</li>
+									</ol>
+
+									<p>The chart below presents the change in income and housing expense for homeowners and renters since 2010:</p>
+
+									<img src="images/inc_hous_chg_1018.svg" width="650">
+									<br><br><br>
+									<p>While income growth for both homeowners and renters did outpace housing expense, the gap was much wider for homeowners. 
+										Another interesting fact is that median housing expense for both groups is actually not that far apart (plotted below). 
+										This might support the third possible explanation outlined above, that steadily increasing rent makes it more difficult for renters to reduce housing expense, compared to homeowners.
+									</p>
+									
+									<img src="images/mort_rent_exp_1018.svg" width="600">
+									<br><br>
+
+									<p>Furthermore, despite the large financial gap between these two groups, renter housing expense is actually higher than homeowner expense in about 45% of US counties. 
+										The map below highlights these counties in yellow (hover & zoom for median figures).
+									</p>
+
+									<h2>Where Renting is More Expensive Than Owning</h2>
+									<iframe title="" aria-label="USA counties (2018) choropleth map" id="datawrapper-chart-TsQyX" src="//datawrapper.dwcdn.net/TsQyX/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 70% !important; border: none;" height="450"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+									</script>
+									<h4><span class="normal"><i>*Source: American Community Survey (Census) 2014–2018 median housing and income estimates</i></span></h4>
+
+									<p>The following plots highlight further differences between these two groups with regards to income and housing, 
+										comparing data in counties where median rent is higher than	median income (and vice versa).
+									</p>
+									<hr>
+									<h2>Patterns Related to Income and Housing Expense</h2>
+									<p>The charts below present distributions of median income and housing expense in counties where either renting or owning is more expensive.</p>
+									
+									<h3>1) <u>Income:</u></h3>
+									<img src="images/renter_owner_incomes1.svg" width=950>
+									<img src="images/renter_owner_incomes2.svg" width=950>
+									<br><br>
+									<h4><span class="normal">
+										<i>*Note: The four median figures listed represent the median of the distribution bars (not the exact median of a particular housing scenario) and should be viewed as no more than a rough estimate.</i>
+									</span></h4>
+									<h3>Notable Findings:</h3>
+									<ul>
+										<li>Incomes are higher in counties where owning is more expensive than renting, indicated by the concentration of incomes in the bottom row being further to the right. 
+											The difference is much more pronounced in homeowner incomes, which may be the only significant finding here.</li>
+									</ul>
+									<hr><br>
+
+									<h3>2) <u>Housing Expense:</u></h3>
+									<img src="images/renter_owner_hous_exp1.svg" width=950>
+									<img src="images/renter_owner_hous_exp2.svg" width=950>
+									<br><br>
+									<h4><span class="normal">
+										<i>*Note: The median figures listed represent the median of the distribution bars (not the exact median of a particular housing type) and should be viewed as no more than a rough estimate.</i>
+									</span></h4>
+									<h3>Notable Findings:</h3>
+										<ul>
+											<li>The distributions of housing expense are significantly wider in counties where owning is more expensive than renting.</li>
+										</ul>
+									<hr><br>
+
+									<h3>3) <u>Income Devoted to Housing:</u></h3>
+									<img src="images/renter_owner_inc_share_hous1.svg" width=950>
+									<img src="images/renter_owner_inc_share_hous2.svg" width=950>
+									<br><br>
+									<h4><span class="normal">
+										<i>*Note: The median figures listed represent the median of the distribution bars (not the exact median of a particular housing type) and should be viewed as no more than a rough estimate.</i>
+									</span></h4>
+									<h3>Notable Findings:</h3>
+										<ul>
+											<li>No obvious differences in either of the distribution pairs, though renters appear to devote slightly more in counties where renting is more expensive 
+												and homeowners also devote slightly more in counties where owning is more expensive.</li>
+										</ul>
+									<hr><br>
+
+									<h2>Patterns Related to Housing & Population Density</h2>
+									<p>In the charts below, each line represents income or housing expense data for counties of a certain housing or population density 
+										(e.g. the red line in the top right chart represents median homeowner income in counties containing more than 200 housing units per square mile).
+										Greater housing and population density are both positively correlated with higher income, higher housing expense, and a higher share of income devoted to housing).
+										I point out some additional findings below each series of charts.
+									</p>
+									<h3>1) <u>Income:</u></h3>
+									<img src="images/comb_inc_hous_den.svg" width=950>
+									<br><br>
+									<img src="images/comb_inc_pop_den.svg" width=950>
+									<h4><span class="normal"><i>*Note: Some lines are hidden due to overlap</i></h4>
+									<h3>Notable Findings:</h3>
+									<ul>
+										<li>Renter income in counties with the lowest housing and population density does not fall in line with the overall pattern of density being correlated with income. 
+											These counties have the third highest renter income. Curiously, this isn't the case with homeowner income in the same density category, which is more consistent with the overall pattern by being the second lowest line.</li>
+									</ul>
+									<hr><br>
+
+									<h3>2) <u>Housing Expense:</u></h3>
+									<img src="images/comb_hous_exp_hous_den_chart.svg" width=950>
+									<br><br>
+									<img src="images/comb_hous_exp_pop_den_chart.svg" width=950>
+									<h4><span class="normal"><i>*Note: Some lines are hidden due to overlap</i></h4>
+									<h3>Notable Findings:</h3>
+									<ul>
+										<li>Homeowner and renter housing expense is very similar in counties with lower housing and population densities.</li>
+									</ul>
+									<hr><br>
+
+									<h3>3) <u>Housing Share of Income:</u></h3>
+									<img src="images/comb_hous_share_hous_den.svg" width=950>
+									<br><br>
+									<img src="images/comb_hous_share_pop_den.svg" width=950>
+									<h4><span class="normal"><i>*Note: Some lines are hidden due to overlap</i></h4>
+									<h3 id='density_end'>Notable Findings:</h3>
+									<ul>
+										<li>While homeowners and renters in higher density counties have higher incomes, they actually devote a greater share of their income to housing than residents of lower density counties. 
+											This indicates that higher income in more densely populated areas is actually negated by even higher housing expense.</li>
+										<li>In low density counties the median share of income that renters devote to housing complies with the 30% rule.</li>
+									</ul>
+
+									<p>*Maps of housing and population density can be viewed <a href="density_maps.html" class="colored">here</a>.</p>
+									<hr><br>
+
+									<h2>Patterns Related to Percentage of County Housing Units Rented</h2>
+									<p>In the charts below, each line represents income or housing expense data for counties where a certain percentage of housing units are rented, as opposed to owned
+										(e.g. the red line in the top right chart represents median homeowner income in counties where more than 50% of housing units are rented).
+									</p>
+									<h3>1) <u>Income:</u></h3>
+									<img src="images/comb_inc_rent_per_chart.svg" width=950>
+									<h4><span class="normal"><i>*Note: Some lines are hidden due to overlap</i></h4>
+									<hr><br>
+
+									<h3>2) <u>Housing Expense:</u></h3>
+									<img src="images/comb_hous_exp_rent_per_chart.svg" width=950>
+									<h4><span class="normal"><i>*Note: Some lines are hidden due to overlap</i></h4>
+									<hr><br>
+
+									<h3>3) <u>Housing Share of Income:</u></h3>
+									<img src="images/comb_hous_share_rent_per.svg" width=950>
+									<h4><span class="normal"><i>*Note: Some lines are hidden due to overlap</i></h4>
+
+									<h3>Notable Findings:</h3>
+									<ul>
+										<li>Overall, a higher percentage of rental units is positively correlated with higher income, higher housing expense, and a higher share of income devoted to housing 
+											with one suprising exception- counties containing the fewest rental units are more similar to counties containing the most rental units (at least with regard to income and housing expense). 
+											This is an interesting finding that definitely merits further investigation.</li>
+									</ul>
+
+									<hr><br>
+
+									<h2>Housing Burden by Region</h2>
+									<p>Plotting the data geographically reveals that the relatively greater housing burden for renters is consistent across the country, though the central part of the US seems least affected. 
+										The map below presents the median percentage of income renters devoted to housing in each US county (2014-2018).
+									</p>
+
+									<h2>Renter Income Devoted to Housing</h2>
+
+									<iframe title="" aria-label="USA counties (2018) choropleth map" id="datawrapper-chart-S8K5i" src="//datawrapper.dwcdn.net/S8K5i/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 70% !important; border: none;" height="450"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+									</script>
+									<br><br>
+
+									<br><p>In contrast to renters, median homeowner housing expense appears to be much more in line with DTI requirements.</p>
+
+									<h2>Homeowner Income Devoted to Housing</h2>
+									<iframe title="" aria-label="USA counties (2018) choropleth map" id="datawrapper-chart-UzMgh" src="//datawrapper.dwcdn.net/UzMgh/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 70% !important; border: none;" height="450"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+									</script>
+									
+									<br><br><br><br><hr>
+									<p>In the next article in this series, I dig into another housing affordability measurement known as the <i>home price-to-income ratio</i>.</p>
+
+									<hr class="major" />
+								</section>
+							</span>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+            <div class="inner">
+
+              <!-- Menu -->
+              <nav id="menu">
+                  <ul>
+                    <br><br><br><br><br><br>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="resume.html">Resume</a></li>										
+                  </ul>
+                </nav>
+
+              <!-- Contact -->
+              <section>
+                  <ul class="icons"><br>
+                    <li><a href="https://www.linkedin.com/in/hassen-morad/" target="blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    <li><a href="https://github.com/hassenmorad" target="blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="https://medium.com/@hassen.morad" target="blank" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                  </ul>
+                  <p>hassen.morad@gmail.com</p>
+                  
+                </section>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

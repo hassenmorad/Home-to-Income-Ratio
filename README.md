@@ -6,7 +6,7 @@ This repository contains all files used to analyze issues related to housing aff
 
 (2) **Analyzing the Home Price-to-Income Ratio** (forthcoming)
 
-(3) **Is California Out Migration Fueled By Unaffordable Housing?** (forthcoming)
+(3) [**Is California Out Migration Fueled By Unaffordable Housing?**](https://hassenmorad.github.io/CA_migration.html)
 
 ## Data Sources:
 1. Housing
